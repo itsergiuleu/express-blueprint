@@ -4,7 +4,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 import bodyParser from 'body-parser';
 import httpContext from 'express-http-context';
-import {attachReqIdMiddleware} from "./request-trace";
+import { attachReqIdMiddleware } from "./request-trace";
 import logger from "./logger";
 import db from "./db/db-config";
 

@@ -1,15 +1,15 @@
 require('dotenv').config()
 
-import express from 'express';
+import express, { Express } from 'express';
 import middlewareConfig from './config/middleware';
 import errorHandlerConfig from './config/error-handler';
 import mainRouter from './routes/MainRouter';
 
-const app = express();
+const app: Express = express();
 middlewareConfig(app);
 
 mainRouter(app);
 
 errorHandlerConfig(app);
 
-module.exports = app;
+export default app;

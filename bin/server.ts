@@ -1,22 +1,20 @@
 /**
  * Module dependencies.
  */
-
-const app = require('../src/app');
-const http = require('http');
+import http, { Server } from 'http';
 import logger from '../src/config/logger';
+import app from '../src/app';
 
 /**
  * Get port from environment and store in Express.
  */
-
 const port = normalizePort('8080');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
-const server = http.createServer(app);
+const server: Server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
