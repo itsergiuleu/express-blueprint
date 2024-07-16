@@ -23,10 +23,6 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-server.on('connect', () => {
-    console.log('Connected');
-})
-
 /**
  * Normalize a port into a number, string, or false.
  */
