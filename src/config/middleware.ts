@@ -41,11 +41,11 @@ export default (app) => {
     // app.use(require('./db/trx-support')({sequelize: db}))
 
     morganBody(app, {
-        noColors: true,
+        noColors: isProd,
         logIP: true,
         logReqDateTime: false,
         maxBodyLength: 5000,
-        prettify: false,
+        prettify: !isProd,
         stream: {
             write: message => {
                 logger.info(message);
